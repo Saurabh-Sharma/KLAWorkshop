@@ -1,8 +1,24 @@
-2022-03-08 14:30:54.000000;M1B_Workflow Entry
-2022-03-08 14:30:54.000000;M1B_Workflow.TaskA Entry
-2022-03-08 14:30:54.000000;M1B_Workflow.TaskA Executing TimeFunction (TaskA_Input, 1)
-2022-03-08 14:30:55.000000;M1B_Workflow.TaskA Exit
-2022-03-08 14:30:55.000000;M1B_Workflow.TaskZ Entry
-2022-03-08 14:30:55.000000;M1B_Workflow.TaskZ Executing TimeFunction (TaskZ_Input, 5)
-2022-03-08 14:31:00.000000;M1B_Workflow.TaskZ Exit
-2022-03-08 14:31:00.000000;M1B_Workflow Exit
+Available results are 14
+[﻿ID, X, Y, Signal]
+[1, 212, 149, 243]
+[2, 212, 202, 20]
+[3, 212, 220, 20]
+[4, 212, 245, 20]
+[5, 213, -293, 83]
+[6, 213, -292, 83]
+[7, 213, -290, 83]
+[8, 213, -173, 74]
+[9, 213, -169, 74]
+[10, 213, 88, 243]
+[11, 213, 89, 243]
+[12, 213, 98, 116]
+[13, 213, 116, 70]
+[14, 213, 117, 70]
+2022-03-08 15:16:29.000000;M1B_Workflow Entry
+2022-03-08 15:16:29.000000;M1B_Workflow.TaskA Entry
+2022-03-08 15:16:29.000000;M1B_Workflow.TaskA Executing TimeFunction (TaskA_Input, 1)
+2022-03-08 15:16:30.000000;M1B_Workflow.TaskA Exit
+2022-03-08 15:16:30.000000;M1B_Workflow.TaskZ Entry
+2022-03-08 15:16:30.000000;M1B_Workflow.TaskZ Executing TimeFunction (TaskZ_Input, 5)
+2022-03-08 15:16:35.000000;M1B_Workflow.TaskZ Exit
+2022-03-08 15:16:35.000000;M1B_Workflow Exit

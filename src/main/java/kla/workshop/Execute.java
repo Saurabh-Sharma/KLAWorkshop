@@ -1,15 +1,30 @@
 package kla.workshop;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+
+import com.opencsv.CSVReader;
+
+import java.io.FileReader;
 import java.time.LocalDateTime;
 
 public class Execute{
 	
 	
 	public void execute(Map<String, Object> workflow) {
+		try{
+			  CSVReader reader = new CSVReader(new FileReader("src/main/resources/Milestone2A_DataInput1.csv"));
+		      List<String[]> lineInArray = reader.readAll();
+		      System.out.println("Available results are "+(lineInArray.size()-1));
+		      for(String[] arr: lineInArray) {
+		    	  System.out.println(Arrays.toString(arr));
+		      }
+		 }
+		catch(Exception exc) {}
+		
 		Map.Entry<String, Object> workflowMap = (Map.Entry<String, Object>)workflow.entrySet().iterator().next();
 		
 		// Setting the log message
