@@ -32,7 +32,11 @@ public class Execute {
 					String executionTimeString = inputs.get("ExecutionTime");
 					int executionTime = Integer.parseInt(executionTimeString);
 					System.out.println(getTime()+" "+logStr+"."+currLogStr+" Entry");
-					timeFunction(functionInput, executionTime, logStr+"."+currLogStr);
+					try {
+						timeFunction(functionInput, executionTime, logStr+"."+currLogStr);
+					}catch(Exception exc) {
+		
+					}
 					System.out.println(getTime()+" "+logStr+"."+currLogStr+" Exit");
 				}
 			}
@@ -47,8 +51,9 @@ public class Execute {
 		}
 	}
 
-	private void timeFunction(String functionInput, int executionTime, String logStr) {
+	private void timeFunction(String functionInput, int executionTime, String logStr) throws InterruptedException {
 		System.out.println(getTime()+" "+logStr+" Executing TimeFunction");
+		Thread.sleep(executionTime*1000);
 		System.out.println("("+functionInput+", "+executionTime+")");
 	}
 	

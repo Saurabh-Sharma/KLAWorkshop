@@ -14,3 +14,7 @@
 2022-03-08 12:45:13.089483200 M1A_Workflow.FlowA.TaskC Exit
 2022-03-08 12:45:13.089483200 M1A_Workflow.FlowA.TaskD Entry
 2022-03-08 12:45:13.089483200 M1A_Workflow.FlowA.TaskD Executing TimeFunction
+(TaskD_Input, 4)
+2022-03-08 12:45:17.097591200 M1A_Workflow.FlowA.TaskD Exit
+2022-03-08 12:45:17.097591200 M1A_Workflow.FlowA Exit
+2022-03-08 12:45:17.097591200 M1A_Workflow Exit
