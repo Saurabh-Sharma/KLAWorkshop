@@ -13,13 +13,13 @@ public class Execute {
 		Map<String, Object> map = (Map<String, Object>)workflowMap.getValue();
 		if(map.get("Type").toString().equals("Flow")) {
 			if(map.get("Execution").toString().equals("Sequential")) {
-				executeFlow((Map<String, Object>)map.get("Activities"), logStr);
+				executeSequentialFlow((Map<String, Object>)map.get("Activities"), logStr);
 			}
 		}
 		System.out.println(getTime()+" "+logStr+" Exit");
 	}
 	
-	public void executeFlow(Map<String, Object> workflowMap, String logStr) {
+	public void executeSequentialFlow(Map<String, Object> workflowMap, String logStr) {
 		for(Map.Entry<String, Object> valueObj: workflowMap.entrySet()) {
 			String currLogStr = valueObj.getKey();
 			Map<String, Object> map = (Map<String, Object>)valueObj.getValue();
@@ -37,7 +37,12 @@ public class Execute {
 				}
 			}
 			else if(type.equals("Flow")) {
-				
+				String execution = (String)map.get("Execution");
+				if(execution.equals("Sequential")) {
+					System.out.println(getTime()+" "+logStr+"."+currLogStr+" Entry");
+					executeSequentialFlow((Map<String, Object>)map.get("Activities"), logStr+"."+currLogStr);
+					System.out.println(getTime()+" "+logStr+"."+currLogStr+" Exit");
+				}
 			}
 		}
 	}
